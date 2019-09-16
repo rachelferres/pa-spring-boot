@@ -1,0 +1,8 @@
+.jumbotron {
+    position: relative;
+    background: #fff url("/images/titanic.jpg") center center;/*slide.jpg =>you image*/    
+    width: 100%;
+    height: 40%;
+    background-size: cover;
+    overflow: hidden;
+}
