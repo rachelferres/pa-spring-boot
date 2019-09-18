@@ -1,9 +1,7 @@
 package uk.ac.belfastmet.dwarfs.service;
 
 import java.util.ArrayList;
-
 import org.springframework.stereotype.Service;
-
 import uk.ac.belfastmet.dwarfs.domain.Dwarf;
 
 @Service
@@ -30,7 +28,7 @@ public class DwarfService {
 
 		this.tolkienDwarfs = new ArrayList<Dwarf>();
 
-		this.tolkienDwarfs = new ArrayList<Dwarf>();
+		
 		this.tolkienDwarfs.add(new Dwarf("Thorin ", "Tolkien", "Thorin.png"));
 		this.tolkienDwarfs.add(new Dwarf("Balin ", "Tolkien", "Balin.png"));
 		this.tolkienDwarfs.add(new Dwarf("Dwalin ", "Tolkien", "Dwalin.png"));
