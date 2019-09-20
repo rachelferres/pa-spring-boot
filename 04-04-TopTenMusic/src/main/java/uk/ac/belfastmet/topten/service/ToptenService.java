@@ -32,16 +32,16 @@ public class ToptenService {
 	public ArrayList<Topten> getAlbumTopten(){
 		this.albumTopten = new ArrayList<Topten>();
 		
-		this.albumTopten.add(new Topten("Sleepy", "Disney", "Sleepy.png"));
-		this.albumTopten.add(new Topten("Sleepy", "Disney", "Sleepy.png"));
-		this.albumTopten.add(new Topten("Sleepy", "Disney", "Sleepy.png"));
-		this.albumTopten.add(new Topten("Sleepy", "Disney", "Sleepy.png"));
-		this.albumTopten.add(new Topten("Sleepy", "Disney", "Sleepy.png"));
-		this.albumTopten.add(new Topten("Sleepy", "Disney", "Sleepy.png"));
-		this.albumTopten.add(new Topten("Sleepy", "Disney", "Sleepy.png"));
-		this.albumTopten.add(new Topten("Sleepy", "Disney", "Sleepy.png"));
-		this.albumTopten.add(new Topten("Sleepy", "Disney", "Sleepy.png"));
-		this.albumTopten.add(new Topten("Sleepy", "Disney", "Sleepy.png"));
+		this.albumTopten.add(new Topten("Post Malone", "Hollywood's Bleeding", "bleeding.jpg"));
+		this.albumTopten.add(new Topten("Ed Sheeran", "No 6 Collaborations Project", "no6.jpg"));
+		this.albumTopten.add(new Topten("Aitch", "Aitch20", "aitch20.jpg"));
+		this.albumTopten.add(new Topten("Taylor Swift", "Lover", "lover.jpg"));
+		this.albumTopten.add(new Topten("Lewis Capaldi", "Divinely Uninspired to a Hellish Extent", "divinely.jpg"));
+		this.albumTopten.add(new Topten("Status Quo", "Backbone", "backbone.jpg"));
+		this.albumTopten.add(new Topten("Lana Del Rey", "Norman F**king Rockwell", "norman.jpg"));
+		this.albumTopten.add(new Topten("Melanie Martinez", "K-12", "k12.jpg"));
+		this.albumTopten.add(new Topten("Jax Jones", "Snacks", "snacks.jpg"));
+		this.albumTopten.add(new Topten("Billie Eilish", "When We All Fall Asleep Where Do We Go", "billie.jpg"));
 		
 		return this.albumTopten;
 	}
