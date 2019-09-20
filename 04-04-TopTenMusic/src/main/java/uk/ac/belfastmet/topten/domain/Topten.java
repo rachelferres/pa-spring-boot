@@ -38,5 +38,8 @@ public class Topten {
 	public void setImage(String image) {
 		this.image = image;
 	}
-
+	
+	public String toString() {
+		return artist + " " + title + " " +image;
+	}
 }

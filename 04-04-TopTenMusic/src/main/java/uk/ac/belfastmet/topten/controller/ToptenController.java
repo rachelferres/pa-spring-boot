@@ -2,23 +2,31 @@ package uk.ac.belfastmet.topten.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
+//import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import uk.ac.belfastmet.topten.service.ToptenService;
 
 @Controller
-@RequestMapping
+@RequestMapping()
 public class ToptenController {
 	
+	Logger logger = LoggerFactory.getLogger(ToptenController.class);
 	
-	@GetMapping()
+	@RequestMapping(value="/", method = RequestMethod.GET)
+	//@GetMapping()
 	public String homePage(Model model) {
 		model.addAttribute("pageTitle", "TopTen");
 		model.addAttribute("numberOfTopten", "10");
+		logger.info("HERE IS AN INFO WARNING");
 		return "index";
 	}
 	
-	@GetMapping("/single")
+	@RequestMapping(value="/single", method = RequestMethod.GET)
+	//@GetMapping("/single")
 	public String singlePage(Model model) {
 		ToptenService toptenService = new ToptenService();
 	
@@ -27,7 +35,8 @@ public class ToptenController {
 		return "single";
 	}
 	
-	@GetMapping("/album")
+	@RequestMapping(value="/album", method = RequestMethod.GET)
+	//@GetMapping("/album")
 	public String albumPage(Model model) {
 		ToptenService toptenService = new ToptenService();
 	
