@@ -59,7 +59,6 @@ public class ToDoController {
 	@RequestMapping(value="/login", method = RequestMethod.GET)
 	public String login(Model model) {
 		
-		
 		welcomeMsg = "Welcome. Please log in using your username and password";
 		
 		
@@ -67,5 +66,15 @@ public class ToDoController {
 		return "login";
 		
 	}
+	
+	@RequestMapping(value="/login1", method = RequestMethod.GET)
+	public String login1(Model model) {
+		
+		welcomeMsg = "Welcome. Please log in using your username and password";
+		
+		
+		model.addAttribute("welcome", welcomeMsg);
+		return "login1";
 
+	}
 }
