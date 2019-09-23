@@ -14,24 +14,25 @@
 	src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"></script>
 <!-- Custom Styles  -->
 
-<title th:text="${pageTitle}"></title>
+<title>To Do List</title>
 </head>
 
-<body background="bgimage.jpg">
+<body>
 	<nav class="navbar navbar-expand-sm bg-primary navbar-dark">
 		<ul class="navbar-nav">
 			<li class="nav-item active"><a class="nav-link" href="/">Home</a>
 			</li>
-			<li class="nav-item"><a class="nav-link" href="#">Singles</a>
+			<li class="nav-item"><a class="nav-link" href="/completed">Completed</a>
 			</li>
-			<li class="nav-item"><a class="nav-link" href="#">Albums</a>
+			<li class="nav-item"><a class="nav-link" href="/incomplete">Incomplete</a>
 			</li>
 		</ul>
 	</nav>
 	<div class="jumbotron text-center">
-		<img src = "../img/toptenalbums.jpg">
-		<h1>Top Ten Albums</h1>
-		<!--  <h2 th:text="${numberOfTopten}"></h2>-->
+	<!--  <img src = "../img/topten.jpg">-->
+		
+		<h1>To Do List</h1>
+		<!-- <h2 th:text="${#}"></h2> -->
 		<br />
 
 	</div>
@@ -39,22 +40,27 @@
 
 	<div class="container">
 
-		<p>THE TOP TEN ALBUMS THIS WEEK ARE....
+		<p>THE TO DO LIST IS....
 		<table class="table table-striped">
 			<thead>
 				<tr>
-					<th>Artist</th>
-					<th>Title</th>
-					<th>Picture</th>
+					<th>NAME</th>
+					<th>DESCRIPTION</th>
+					<th>DATE</th>
+					<th>Completed or not?</th>
+					<th>Person Completing</th>
+					<th>Priority</th>
 				</tr>
 			</thead>
 			<tbody>
-				<tr th:each="building: ${buildings}">
-				
-					<td th:text="${building.name}">Happy</td>
-					<td th:text="${building.floorArea}">Happy</td>
-					
-					<!-- <td><img src="../static/img/Happy.png" th:src="@{/img/} + ${album.image}"></img></td> -->
+				<tr th:each="todo: ${toDo}">
+					<td th:text="${todo.name}"></td>
+					<td th:text="${todo.description}"></td>
+					<td th:text="${todo.completionDate}"></td>
+					<td th:text="${todo.completedOrNot}"></td>
+					<td th:text="${todo.userName}"></td>
+					<td th:text="${todo.priority}"></td>
+					<!-- <td><img src="../static/img/Happy.png" th:src="@{/img/} + ${topten.image}"></img></td> -->
 				</tr>
 			</tbody>
 		</table>
@@ -62,3 +68,4 @@
 
 </body>
 </html>
+

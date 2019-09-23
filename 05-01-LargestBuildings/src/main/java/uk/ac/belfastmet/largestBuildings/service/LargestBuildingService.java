@@ -2,7 +2,6 @@ package uk.ac.belfastmet.largestBuildings.service;
 
 import java.util.ArrayList;
 
-import org.apache.commons.logging.LogFactoryService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -11,7 +10,7 @@ import uk.ac.belfastmet.largestBuildings.domain.LargestBuilding;
 
 public class LargestBuildingService {
 	
-	public static ArrayList<LargestBuilding> largestBuilding = new ArrayList<LargestBuilding>();
+	public static ArrayList<LargestBuilding> largestBuildings = new ArrayList<LargestBuilding>();
 //	private ArrayList <LargestBuilding> largestBuildingFloorArea;
 //	private ArrayList <LargestBuilding> largestBuildingFootprint;
 //	private ArrayList <LargestBuilding> largestBuildingUsableVolume;
@@ -55,23 +54,29 @@ public class LargestBuildingService {
 	public void initLargestBuildings() {
 		Logger logger = LoggerFactory.getLogger(LargestBuildingController.class);
 		
-		largestBuilding.
-		largestBuilding.add(null);
+		//added s to building
+		//largestBuilding.add
+		largestBuildings.add(null);
 		
 	}
 	
 	public ArrayList<LargestBuilding> getLargestBuildingUsableVolume(){
 		
-		
-		return largestBuilding;
+		//added s to building
+		return largestBuildings;
 	}
 	
+	
+	/**
+	 * 
+	 * @return
+	 */
 	public ArrayList<LargestBuilding> getLargestBuildingFloorArea(){
 			
-			
-		return largestBuilding;
+		//added s to building	
+		return largestBuildings;
 	
-//		return this.largestBuildingUsableVolume;
+		//return this.largestBuildingUsableVolume;
 		
 	}
 	

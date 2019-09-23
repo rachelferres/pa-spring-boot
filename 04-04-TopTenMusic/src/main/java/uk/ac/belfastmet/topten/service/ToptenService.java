@@ -2,6 +2,8 @@ package uk.ac.belfastmet.topten.service;
 
 import java.util.ArrayList;
 import org.springframework.stereotype.Service;
+
+import uk.ac.belfastmet.TODO.domain.ToDo;
 import uk.ac.belfastmet.topten.domain.Topten;
 
 @Service
@@ -10,9 +12,14 @@ public class ToptenService {
 	private ArrayList<Topten> singleTopten;
 	private ArrayList<Topten> albumTopten;
 	
-	
+	/**
+	 * 
+	 * @return
+	 */
 	public ArrayList<Topten> getSingleTopten(){
 		this.singleTopten = new ArrayList<Topten>();
+		
+
 		
 		this.singleTopten.add(new Topten("Ed Sheeran ft Stormzy", "Take me back to London", "edLondon.png"));
 		this.singleTopten.add(new Topten("Aitch", "Taste", "taste.png"));
@@ -28,7 +35,10 @@ public class ToptenService {
 		return this.singleTopten;
 	}
 	
-	
+	/**
+	 * 
+	 * @return
+	 */
 	public ArrayList<Topten> getAlbumTopten(){
 		this.albumTopten = new ArrayList<Topten>();
 		

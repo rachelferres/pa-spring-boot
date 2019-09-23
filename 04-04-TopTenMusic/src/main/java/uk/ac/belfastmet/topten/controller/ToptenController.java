@@ -16,6 +16,11 @@ public class ToptenController {
 	
 	Logger logger = LoggerFactory.getLogger(ToptenController.class);
 	
+	/**
+	 * 
+	 * @param model
+	 * @return
+	 */
 	@RequestMapping(value="/", method = RequestMethod.GET)
 	//@GetMapping()
 	public String homePage(Model model) {
@@ -25,6 +30,11 @@ public class ToptenController {
 		return "index";
 	}
 	
+	/**
+	 * 
+	 * @param model topten calls the arrayList of singles 
+	 * @return the single page
+	 */
 	@RequestMapping(value="/single", method = RequestMethod.GET)
 	//@GetMapping("/single")
 	public String singlePage(Model model) {
@@ -34,7 +44,11 @@ public class ToptenController {
 		model.addAttribute("topten", toptenService.getSingleTopten());
 		return "single";
 	}
-	
+	/**
+	 * 
+	 * @param model top ten calls the album arrayList
+	 * @return the album page
+	 */
 	@RequestMapping(value="/album", method = RequestMethod.GET)
 	//@GetMapping("/album")
 	public String albumPage(Model model) {

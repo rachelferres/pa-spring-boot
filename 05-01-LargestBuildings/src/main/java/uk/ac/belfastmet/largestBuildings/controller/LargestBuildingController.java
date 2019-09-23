@@ -18,7 +18,11 @@ public class LargestBuildingController {
 		
 		return "index";
 	}
-	
+	/**
+	 * 
+	 * @param model
+	 * @return
+	 */
 	@GetMapping("/floorArea")
 	public String floorArea(Model model) {
 		model.addAttribute("pageTitle", "Top ten singles");
