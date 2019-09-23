@@ -11,18 +11,14 @@ import uk.ac.belfastmet.largestBuildings.service.LargestBuildingService;
 @Controller
 @RequestMapping
 public class LargestBuildingController {
-	protected static LargestBuildingService largestBuildingService = new LargestBuildingService();
+	public static LargestBuildingService largestBuildingService = new LargestBuildingService();
 	
-	@GetMapping()
+	@GetMapping("")
 	public String homePage() {
 		
 		return "index";
 	}
-	/**
-	 * 
-	 * @param model
-	 * @return
-	 */
+	
 	@GetMapping("/floorArea")
 	public String floorArea(Model model) {
 		model.addAttribute("pageTitle", "Top ten singles");
