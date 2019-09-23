@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://thymeleaf.org">
+<head>
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" />
+
+<!-- jQuery library -->
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"></script>
+<!-- Custom Styles  -->
+
+<title>To Do Login</title>
+</head>
+
+<body>
+	<nav class="navbar navbar-expand-sm bg-primary navbar-dark">
+		<ul class="navbar-nav">
+			<li class="nav-item active"><a class="nav-link" href="/login">Home</a>
+			</li>
+			<li class="nav-item"><a class="nav-link" href="/login">Completed</a>
+			</li>
+			<li class="nav-item"><a class="nav-link" href="/login">Incomplete</a>
+			</li>
+		</ul>
+	</nav>
+	<div class="jumbotron text-center">
+		<!--  <img src = "../img/topten.jpg">-->
+
+		<h1></h1>
+		<h2 th:text="${welcome}"></h2>
+		<br />
+
+	</div>
+
+
+	<div class="container">
+
+		<p>
+		<table class="table table-striped">
+			<thead>
+				
+			<tbody>
+				<form action="/">
+					UserName: <input type="text" name="Username" value="Mickey"><br>
+					Password: <input type="text" name="Password" value="Mouse"><br>
+					<input type="submit" value="Login">
+				</form>
+
+				<p>Click the "Submit" button and the form-data will be sent to a
+					page on the server called "/action_page.php".</p>
+
+			</tbody>
+		</table>
+	</div>
+
+</body>
+</html>
+
