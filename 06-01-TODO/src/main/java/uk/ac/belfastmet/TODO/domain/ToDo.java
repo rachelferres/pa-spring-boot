@@ -3,19 +3,19 @@ package uk.ac.belfastmet.TODO.domain;
 import java.util.Date;
 
 public class ToDo {
-	
+
 	private String name;
 	private String description;
 	private String completionDate;
 	private boolean completedOrNot;
 	private String userName;
 	private String priority;
-	
-	
+
+
 	public ToDo() {
-		
+
 	}
-	
+
 	public ToDo(String name, String description, String completionDate, boolean completedOrNot, String userName,
 			String priority) {
 		this.name = name;
@@ -61,9 +61,9 @@ public class ToDo {
 	public void setPriority(String priority) {
 		this.priority = priority;
 	}
-	
+
 	public String toString() {
-		
+
 		return name+" "+description+" "+completionDate+" "+completedOrNot+" "+userName+" "+ priority;
 	}
 

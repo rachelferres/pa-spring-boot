@@ -12,10 +12,11 @@ import uk.ac.belfastmet.TODO.service.ToDoService;
 
 @RequestMapping
 @Controller
+//Javadoc required before methods
 public class ToDoController {
 	Logger logger = LoggerFactory.getLogger(ToDoController.class);
 	private String welcomeMsg = "Welcome. Here is your to do list";
-	private char[] charMsg = {'a', 'b', 'c'};
+	private char[] charMsg = {'a', 'b', 'c'}; //What are you using this for? :)
 	
 	@RequestMapping(value="/", method = RequestMethod.GET)
 	public String homePage(Model model) {
@@ -31,7 +32,7 @@ public class ToDoController {
 	
 	@RequestMapping(value="/completed", method = RequestMethod.GET)
 	public String completed(Model model) {
-		welcomeMsg = "Get Cracking!!";
+		welcomeMsg = "Well Done!"; //This is the completed page, need to swap this message with incomplete welcomeMsg
 		ToDoService toDoService = new ToDoService();
 		logger.info("HERE IS AN INFO WARNING");
 		
@@ -43,7 +44,7 @@ public class ToDoController {
 	
 	@RequestMapping(value="/incomplete", method = RequestMethod.GET)
 	public String incomplete(Model model) {
-		welcomeMsg = "Well Done!";
+		welcomeMsg = "Get Cracking!!"; //*
 
 		
 		ToDoService toDoService = new ToDoService();
