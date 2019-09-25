@@ -40,7 +40,7 @@ public class ToDoController {
 		
 		welcomeMsg = "Welcome. Here is your to do list";
 		
-		//model.addAttribute("toDo", toDoService.getToDoList());
+		model.addAttribute("toDo", toDoService.getToDoList());
 		model.addAttribute("welcome", welcomeMsg);
 		return "index";
 		
@@ -57,46 +57,51 @@ public class ToDoController {
 		
 		logger.info("HERE IS AN INFO WARNING");
 		toDoService.getNumberOfTasks();
-		//model.addAttribute("toDo", toDoService.getCompletedToDoList());
+		model.addAttribute("toDo", toDoService.getCompletedToDoList());
 		model.addAttribute("welcome", welcomeMsg);
 		return "completed";
 		
 	}
 	
-	@RequestMapping(value="/incomplete", method = RequestMethod.GET)
+	
 	/**
 	 * 
 	 * @param model
 	 * @return 
 	 */
+	@RequestMapping(value="/incomplete", method = RequestMethod.GET)
 	public String incomplete(Model model) {
 		welcomeMsg = "Get Cracking - Don't dissappoint Aidan!!"; //*
-		
-		
 		toDoService.getNumberOfTasks();
-		
-		
 		logger.info("HERE IS AN INFO WARNING");
 		
-		//model.addAttribute("toDo", toDoService.getInCompletedToDoList());
+		model.addAttribute("toDo", toDoService.getInCompletedToDoList());
 		model.addAttribute("welcome", welcomeMsg);
-		
+
 		return "incomplete";
 		
 	}
 	
 	@RequestMapping(value="/login", method = RequestMethod.GET)
+	/**
+	 * 
+	 * @param model
+	 * @return login page
+	 */
 	public String login(Model model) {
 		
 		welcomeMsg = "Welcome. Please log in using your username and password";
-		
-		
 		model.addAttribute("welcome", welcomeMsg);
 		return "login";
 		
 	}
 	
 	@RequestMapping(value="/login1", method = RequestMethod.GET)
+	/**
+	 * 
+	 * @param model
+	 * @return login 1 page 
+	 */
 	public String login1(Model model) {
 		
 		welcomeMsg = "Welcome. Please log in using your username and password";

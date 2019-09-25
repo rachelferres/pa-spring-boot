@@ -27,6 +27,14 @@ public class ToDo {
 
 	}
 // Colin: needs a javadoc to describe the expected parameters :)
+	/**
+	 * 
+	 * @param name
+	 * @param description
+	 * @param completionDate
+	 * @param userName
+	 * @param priority
+	 */
 	public ToDo(String name, String description, String completionDate, String userName,
 			String priority) {
 		this.name = name;
@@ -63,7 +71,7 @@ public class ToDo {
 	public void setDescription(String description) {
 		this.description = description;
 	}
-	@Column(name = "completionDate")
+	@Column(name = "completiondate")
 	public String getCompletionDate() {
 		return completionDate;
 	}
@@ -77,7 +85,7 @@ public class ToDo {
 //	public void setCompletedOrNot(boolean completedOrNot) {
 //		this.completedOrNot = completedOrNot;
 //	}
-	@Column(name = "userName")
+	@Column(name = "username")
 	public String getUserName() {
 		return userName;
 	}
