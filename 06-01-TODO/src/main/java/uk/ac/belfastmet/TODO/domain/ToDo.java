@@ -13,7 +13,7 @@ import javax.persistence.Table;
 @Entity
 @Table(name = "task")
 public class ToDo {
-
+	
 	private String name;
 	private String description;
 	private String completionDate;
@@ -22,12 +22,11 @@ public class ToDo {
 	private String priority;
 	private long id;
 
-
 	
 	public ToDo() {
 
 	}
-
+// Colin: needs a javadoc to describe the expected parameters :)
 	public ToDo(String name, String description, String completionDate, String userName,
 			String priority) {
 		this.name = name;

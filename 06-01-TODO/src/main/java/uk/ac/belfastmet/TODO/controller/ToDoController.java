@@ -16,7 +16,11 @@ import uk.ac.belfastmet.TODO.service.ToDoService;
 
 @RequestMapping
 @Controller
-//Javadoc required before methods
+/**
+ * 
+ * @author fer19171898
+ * ToDo Controller
+ */
 public class ToDoController {
 	@Autowired
 	private ToDoService toDoService;
@@ -26,6 +30,11 @@ public class ToDoController {
 	
 	
 	@RequestMapping(value="/", method = RequestMethod.GET)
+	/**
+	 * 
+	 * @param model
+	 * @return index home page
+	 */
 	public String homePage(Model model) {
 		toDoService.getNumberOfTasks();
 		
@@ -38,26 +47,38 @@ public class ToDoController {
 	}
 	
 	@RequestMapping(value="/completed", method = RequestMethod.GET)
+	/**
+	 * 
+	 * @param model
+	 * @return completed tasks page
+	 */
 	public String completed(Model model) {
 		welcomeMsg = "Well Done!"; 
 		
 		logger.info("HERE IS AN INFO WARNING");
-		
-		model.addAttribute("toDo", toDoService.getCompletedToDoList());
+		toDoService.getNumberOfTasks();
+		//model.addAttribute("toDo", toDoService.getCompletedToDoList());
 		model.addAttribute("welcome", welcomeMsg);
 		return "completed";
 		
 	}
 	
 	@RequestMapping(value="/incomplete", method = RequestMethod.GET)
+	/**
+	 * 
+	 * @param model
+	 * @return 
+	 */
 	public String incomplete(Model model) {
-		welcomeMsg = "Get Cracking!!"; //*
-
+		welcomeMsg = "Get Cracking - Don't dissappoint Aidan!!"; //*
+		
+		
+		toDoService.getNumberOfTasks();
 		
 		
 		logger.info("HERE IS AN INFO WARNING");
 		
-		model.addAttribute("toDo", toDoService.getInCompletedToDoList());
+		//model.addAttribute("toDo", toDoService.getInCompletedToDoList());
 		model.addAttribute("welcome", welcomeMsg);
 		
 		return "incomplete";
