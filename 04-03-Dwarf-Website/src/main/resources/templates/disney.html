@@ -45,13 +45,14 @@
 				<tr>
 					<th>Name</th>
 
-					<th>Picture</th>
+					<th>Author</th>
 				</tr>
 			</thead>
 			<tbody>
 				<tr th:each="dwarf: ${dwarfs}">
 					<td th:text="${dwarf.name}">Happy</td>
-					<td><img src="../static/img/Happy.png" th:src="@{/img/} + ${dwarf.image}"></img></td>
+					<td th:text="${dwarf.author}">Happy</td>
+					
 				</tr>
 			</tbody>
 		</table>
